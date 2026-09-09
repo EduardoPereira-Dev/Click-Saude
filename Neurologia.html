@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html pt-br>
+     <!-- REFERENCIAS:
+        TEXTO:https://nav.dasa.com.br/blog/neurologista
+        
+        IMAGENS:https://unsplash.com/pt-br/s/fotografias/cardi%C3%B3logo
+     -->
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Click Saúde - Neurologia</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f2f2f2;
+            }
+
+            .titulo {
+                color: #f2f2f2;
+            }
+
+            .titulo h1 {
+                font-size: 36px;
+            }
+
+            .titulo h3 {
+                margin-top: 5px;
+                font-weight: normal;
+            }
+
+            /* =========================
+                        HEADER
+            ========================== */
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 40px;
+                background-color: #30895f;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .titulo {
+                color: #f2f2f2;
+            }
+
+            .titulo h1 {
+                font-size: 36px;
+            }
+
+            .titulo h3 {
+                margin-top: 5px;
+                font-weight: normal;
+            }
+
+            /* =========================
+                        BOTÕES
+            ========================== */
+
+            .acoes button,
+            .acoes_2 {
+                padding: 12px 22px;
+                border: none;
+                background-color: #30895f;
+                color: white;
+                cursor: pointer;
+                border-radius: 8px;
+                font-size: 16px;
+                transition: 0.3s;
+            }
+
+            .acoes button:hover,
+            .acoes_2:hover {
+                background-color: #256b4a;
+            }
+            /* =========================
+                        PRINCIPAL
+            ========================== */
+
+            .principal {
+                padding: 40px;
+                text-align: left;
+                font-size: 19px;
+            }
+
+            .principal p {
+                font-size: 25px;
+                color: #30895f;
+                line-height: 1.6;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            /* =========================
+            CARROSSEL
+            ========================== */
+
+            .carrossel {
+                position: relative;
+                width: 90%;
+                max-width: 900px;
+                margin: 30px auto;
+            }
+
+            .carrossel img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+
+            .prev,
+            .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                background-color: rgba(0,0,0,0.5);
+                color: white;
+
+                border: none;
+                padding: 12px 16px;
+
+                cursor: pointer;
+                font-size: 22px;
+
+                border-radius: 50%;
+                transition: 0.3s;
+            }
+
+            .prev {
+                left: 15px;
+            }
+
+            .next {
+                right: 15px;
+            }
+
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+            .especialidades {
+                padding: 20px 40px;
+                text-align: center;
+            }
+
+            .especialidades p {
+                font-size: 28px;
+                font-weight: bold;
+                color: #30895f;
+                margin-bottom: 20px;
+            }
+
+            .especialidades-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .especialidades button {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+
+                padding: 15px 20px;
+
+                border: none;
+                border-radius: 12px;
+
+                background-color: white;
+                color: #333;
+
+                cursor: pointer;
+                transition: 0.3s;
+
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            .especialidades button:hover {
+                background-color: #30895f;
+                color: white;
+                transform: translateY(-3px);
+            }
+
+            .especialidades button span {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            /* =========================
+            FOOTER
+            ========================== */
+            footer {
+            background-color: #30895f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            }
+        /* =========================
+           RESPONSIVIDADE
+        ========================== */
+
+            @media (max-width: 768px) {
+
+                header {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .titulo h1 {
+                    font-size: 28px;
+                }
+
+                .especialidades-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .especialidades button,
+                .contatos button {
+                    width: 100%;
+                    max-width: 350px;
+                    justify-content: center;
+                }
+
+                .principal {
+                    padding: 20px;
+                }
+                .principal {
+                padding: 20px 40px;
+                text-align: center;
+                }
+
+                .principal p {
+                    font-size: 28px;
+                    font-weight: bold;
+                    color: #30895f;
+                    margin-bottom: 20px;
+                }
+
+                .principal-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 15px;
+                }
+            }    
+        </style>
+</head>
+
+    <body>
+
+        <header>
+
+            <div class="titulo">
+                <h1>Click Saúde</h1>
+                <h3>Cuidando da sua saúde com excelência</h3>
+            </div>
+
+            <div class="acoes">
+                <button onclick="window.location.href='login.html'">
+                    Entrar</button>
+            </div>
+        </header>
+
+        <!-- CARROSSEL -->
+
+        <div class="carrossel">
+
+            <button class="prev"
+            onclick="mudarSlide(-1)"
+            aria-label="Imagem anterior">
+                ❮
+            </button>
+
+            <img id="imagem-carrossel"
+            src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop"
+            alt="Imagem da clínica">
+
+            <button class="next"
+            onclick="mudarSlide(1)"
+            aria-label="Próxima imagem">
+                ❯
+            </button>
+
+        </div>
+
+        <div class="principal">
+
+            O neurologista é <b>o médico que diagnostica, trata e avalia problemas que afetam o cérebro e o sistema nervoso (medula espinhal e nervos).</b><br>  
+
+            De forma geral, o neurologista é o especialista que conhece detalhadamente como funciona a anatomia, a função e as condições que afetam os nervos e o sistema nervoso.<br>  
+
+            Vale lembrar que o sistema nervoso é o responsável pelo comando do corpo — tanto pensamentos quanto ações e movimentos. Portanto, qualquer disfunção pode comprometer a qualidade de vida do indivíduo. <br> 
+
+            A seguir, veja detalhes sobre a atuação do neurologista, quais exames são indicados e quando é necessário procurar o especialista.<br><br>
+
+            <p>O que o Neurologista faz?</p> 
+            O neurologista é o especialista que avalia, diagnostica e trata distúrbios neurológicos, ou seja, que afetam <b>o cérebro e o sistema nervoso central e nervos.</b><br>
+
+            Portanto, o médico neurologista se especializa em tratar doenças relacionadas ao sistema nervoso central, indicando os medicamentos e tratamentos mais adequados para cada caso.<br>
+
+            É comum que o neurologista seja consultado quando o indivíduo apresenta dores de cabeça, perda de memória, insônia, tonturas e problemas relacionados ao sono.<br><br>
+
+            <p>Quando procurar um Neurologista?</p> 
+            É importante procurar um neurologista em caso de sintomas frequentes, que atrapalham a rotina e sem causa aparente. Entre eles, estão:<br>
+            <ul>
+                <li>Dores de cabeça.</li>
+                <li>Dormência ou formigamento.</li>
+                <li>Confusão mental ou perda de memória.</li>
+                <li>Distúrbios do sono.</li>
+                <li>Fraqueza muscular.</li>
+                <li>Crises convulsivas.</li>
+                <li>Dificuldade para caminhar, tremores ou movimentos não intencionais.</li>
+                <li>Sensação de vertigem ou desequilíbrio.</li>
+                <li>Dificuldade repentina de enxergar.</li>
+                <li>Dor crônica.</li><br>
+            </ul>
+            <p>Quais são as doenças neurológicas mais comuns?</p> 
+            As doenças mais comuns tratadas pelos neurologistas são:<br>
+            <ul>
+                <li>Convulsões e tremores (movimentos incontroláveis do corpo)</li>  
+                <li>Distúrbios da consciência e da memória</li>  
+                <li>Distúrbios do sono, como insônia</li>
+                <li>Dores de cabeça e enxaquecas</li>
+                <li>Vertigem</li>
+                <li>Rigidez ou fraqueza muscular</li>
+                <li>Parkinson</li>
+                <li>Alzheimer</li>
+                <li>Lesões ou infecções que afetam o cérebro e medula espinhal</li>
+                <li>Tumores cerebrais</li>
+                <li>Hemorragia cerebral</li>
+                <li>Epilepsia</li>
+                <li>Esclerose múltipla</li>  
+                <li>Esclerose lateral amiotrófica</li>  
+                <li>Neuropatia periférica</li>  
+                <li>Nervos comprimidos</li>
+                <li>Acidente vascular cerebral (AVC);</li>
+                <li>Doenças que afetam os nervos e raízes nervosas</li>  
+                <li>Polineuropatia, ou seja, a disfunção de vários nervos ao mesmo tempo.</li><br>
+            </ul>
+
+            <p>Quais exames neurológicos o médico pode solicitar?</p> 
+            No momento da consulta, o neurologista realiza o exame neurológico, ou seja, examina o paciente procurando alterações na pele e músculos.<br>
+
+            O especialista também testa seus reflexos nervosos, avaliando a postura e a marcha para checar se há algum problema que afete a capacidade de equilíbrio da pessoa.<br>
+
+            Em seguida, pode realizar testes específicos de memória para avaliar a capacidade mental e psicológica do paciente.<br>
+
+            Além disso, solicita exames laboratoriais e neurológicos, que são os de imagens. Entre os principais exames que o neurologista pode solicitar, estão:   
+            <ul>
+                <li>Hemograma</li>  
+                <li>Ultrassom transcraniano</li>  
+                <li>Tomografia</li>
+                <li>Ressonância magnética</li>  
+                <li>Eletroencefalograma</li> 
+                <li>Doppler transcraniano</li>  
+                <li>Eletromiografia</li>
+            </ul>
+        </div>
+
+        <div class="especialidades">
+
+                <p>Especialidades</p>
+
+                <div class="especialidades-container">
+
+                    <button onclick="window.location.href='Inicial.html'">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Pagina Inicial</span>
+                    </button>
+
+                    <button onclick="window.location.href='clinico-geral.html'">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>Clínico Geral</span>
+                    </button>
+
+                    <button onclick="window.location.href='Cardiologia.html'">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Cardiologia</span>
+                    </button>
+
+                    <button onclick="window.location.href='oftalmologia.html'">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>Oftalmologia</span>
+                    </button>
+
+                </div>
+        </div>
+            <script>
+
+            const imagens = [
+
+                "https://images.unsplash.com/photo-1644648479153-2a3dbee76212?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+                "https://images.unsplash.com/photo-1716833322990-acbeae5cc3eb?q=80&w=1029&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+                "https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=1200&auto=format&fit=crop"
+
+            ];
+
+            let indice = 0;
+
+            function mudarSlide(direcao) {
+
+                indice += direcao;
+
+                if (indice >= imagens.length) {
+                    indice = 0;
+                }
+
+                if (indice < 0) {
+                    indice = imagens.length - 1;
+                }
+
+                document.getElementById("imagem-carrossel").src = imagens[indice];
+            }
+
+            // Carrossel automático
+
+            setInterval(() => {
+                mudarSlide(1);
+            }, 4000);
+
+            </script>
+        <footer>
+            <p>© 2026 Click Saúde - Todos os direitos reservados</p>
+        </footer>
+
+    </body>
+</html>

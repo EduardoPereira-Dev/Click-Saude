@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <!-- 
+    REFERENCIA: 
+    https://nav.dasa.com.br/blog/clinico-geral
+    -->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Click Saúde - Clinico Geral</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f2f2f2;
+            }
+
+            .titulo {
+                color: #f2f2f2;
+            }
+
+            .titulo h1 {
+                font-size: 36px;
+            }
+
+            .titulo h3 {
+                margin-top: 5px;
+                font-weight: normal;
+            }
+
+            /* =========================
+                        HEADER
+            ========================== */
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 40px;
+                background-color: #30895f;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .titulo {
+                color: #f2f2f2;
+            }
+
+            .titulo h1 {
+                font-size: 36px;
+            }
+
+            .titulo h3 {
+                margin-top: 5px;
+                font-weight: normal;
+            }
+
+            /* =========================
+                        BOTÕES
+            ========================== */
+
+            .acoes button,
+            .acoes_2 {
+                padding: 12px 22px;
+                border: none;
+                background-color: #30895f;
+                color: white;
+                cursor: pointer;
+                border-radius: 8px;
+                font-size: 16px;
+                transition: 0.3s;
+            }
+
+            .acoes button:hover,
+            .acoes_2:hover {
+                background-color: #256b4a;
+            }
+            /* =========================
+                        PRINCIPAL
+            ========================== */
+
+            .principal {
+                padding: 40px;
+                text-align: left;
+                font-size: 19px;
+            }
+
+            .principal p {
+                font-size: 25px;
+                color: #30895f;
+                line-height: 1.6;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            /* =========================
+            CARROSSEL
+            ========================== */
+
+            .carrossel {
+                position: relative;
+                width: 90%;
+                max-width: 900px;
+                margin: 30px auto;
+            }
+
+            .carrossel img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+
+            .prev,
+            .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                background-color: rgba(0,0,0,0.5);
+                color: white;
+
+                border: none;
+                padding: 12px 16px;
+
+                cursor: pointer;
+                font-size: 22px;
+
+                border-radius: 50%;
+                transition: 0.3s;
+            }
+
+            .prev {
+                left: 15px;
+            }
+
+            .next {
+                right: 15px;
+            }
+
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+            .especialidades {
+                padding: 20px 40px;
+                text-align: center;
+            }
+
+            .especialidades p {
+                font-size: 28px;
+                font-weight: bold;
+                color: #30895f;
+                margin-bottom: 20px;
+            }
+
+            .especialidades-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .especialidades button {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+
+                padding: 15px 20px;
+
+                border: none;
+                border-radius: 12px;
+
+                background-color: white;
+                color: #333;
+
+                cursor: pointer;
+                transition: 0.3s;
+
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            .especialidades button:hover {
+                background-color: #30895f;
+                color: white;
+                transform: translateY(-3px);
+            }
+
+            .especialidades button span {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            /* =========================
+            FOOTER
+            ========================== */
+            footer {
+            background-color: #30895f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            }
+        /* =========================
+           RESPONSIVIDADE
+        ========================== */
+
+            @media (max-width: 768px) {
+
+                header {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .titulo h1 {
+                    font-size: 28px;
+                }
+
+                .especialidades-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .especialidades button,
+                .contatos button {
+                    width: 100%;
+                    max-width: 350px;
+                    justify-content: center;
+                }
+
+                .principal {
+                    padding: 20px;
+                }
+                .principal {
+                padding: 20px 40px;
+                text-align: center;
+                }
+
+                .principal p {
+                    font-size: 28px;
+                    font-weight: bold;
+                    color: #30895f;
+                    margin-bottom: 20px;
+                }
+
+                .principal-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 15px;
+                }
+            }    
+        </style>
+
+</head>
+
+<body>
+
+    <header> 
+        
+        <div class="titulo">
+            <h1>Click Saúde</h1>
+            <h3>Cuidando da sua saúde com excelência</h3>
+        </div>
+
+        <div class="acoes">
+            <button onclick="window.location.href='login.html'">
+                Entrar</button>
+        </div>
+
+    </header>
+
+        <!-- CARROSSEL -->
+
+        <div class="carrossel">
+
+            <button class="prev"
+            onclick="mudarSlide(-1)"
+            aria-label="Imagem anterior">
+                ❮
+            </button>
+
+            <img id="imagem-carrossel"
+            src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop"
+            alt="Imagem da clínica">
+
+            <button class="next"
+            onclick="mudarSlide(1)"
+            aria-label="Próxima imagem">
+                ❯
+            </button>
+
+        </div>
+
+
+        <div class="principal">
+
+            <p>
+                Clinico geral
+            </p>
+
+            O clínico geral é um médico fundamental no cuidado primário à saúde. Ele pode ser o ponto de partida para uma saúde melhor e um cuidado mais abrangente.<br>
+
+            Este profissional tem aptidão para oferecer uma ampla gama de cuidados médicos, incluindo prevenção, diagnóstico, tratamento e gerenciamento de várias condições médicas.<br>
+
+            Para se tornar clínico geral, ele precisa ter concluído o curso de Medicina e ter completado um período de residência de, pelo menos, dois anos em Clínica Médica, aprofundando seus conhecimentos e habilidades em diversas áreas da medicina.<br> 
+
+            Siga a leitura para saber quais doenças esse profissional trata e quando procurá-lo.<br><br>
+
+            <p>
+                Clínico geral: o que faz?
+            </p>
+            O clínico geral é um médico generalista preparado para atender o paciente desde a prevenção até o tratamento de diversas doenças. Quando julgar pertinente, o clínico pode encaminhar o paciente ao um especialista para um tratamento mais específico.<br>
+
+            Ele realiza seus atendimentos tanto em serviços de atenção primária, bem como secundária e terciária. Em outras palavras, na atenção primária, atua na promoção da saúde e prevenção de doenças; na secundária, os cuidados são oferecidos para as condições mais complexas e, já na terciária, cuida de condições raras e complexas.<br>
+
+            Para se ter uma ideia, o profissional pode atuar em clínicas, hospitais, centros especializados, ambulatórios, departamentos de medicina, entre outros.<br>
+
+            <p>
+                Quando procurar um clínico geral?
+            </p> 
+            O clínico geral pode ser procurado tanto para exames de rotina e prevenção de doenças, como para o diagnóstico e tratamento de queixas relacionadas ao sistema gastrointestinal, respiratório, cardiológico, muscular e até neurológico.<br>
+            Quando a condição do paciente exige uma avaliação mais detalhada, o clínico geral encaminha o caso a um especialista.<br> 
+            Contudo, vale destacar que o clínico geral não realiza procedimentos cirúrgicos. Nestes casos, um cirurgião deverá ser consultado. O mesmo vale para casos de ginecologia e obstetrícia que requerem um especialista da área.<br><br>
+
+            <h3>
+                Pronto atendimento
+            </h3>  
+            <br>No pronto atendimento, o clínico ajuda os pacientes em casos leves como um resfriado e em condições mais graves como infarto ou AVC (Acidente Vascular Cerebral). Nesse sentido, suas principais funções incluem:<br> 
+            <ul>
+                <li><b>Triagem e avaliação inicial:</b> com o intuito de verificar a gravidade dos sintomas e indicar a ordem de atendimento, sendo que urgência requer atenção rápida, mas não representa risco à vida e, no caso de emergência, a situação é grave e representa risco de morte.<br></li> 
+                <li><b>Estabilização de emergências:</b> em casos de parada cardiorrespiratória pode ter um papel crucial na estabilidade inicial do paciente.</li> 
+                <li><b>Orientações:</b> em relação ao tratamento, cuidados pós-atendimento, medicações prescritas e possíveis complicações.</li>
+            </ul> 
+            Encaminhamento para outros especialistas quando necessário. 
+            Vale ressaltar que, mesmo no pronto atendimento, o clínico geral não atende casos cirúrgicos e ginecológicos/obstétricos.<br><br>
+
+            <p>
+                Consulta Agendada
+            </p>
+            No consultório, o clínico geral é o profissional que atende o paciente de forma integral, evitando, assim, o encaminhamento a múltiplas especialidades. Entre suas funções, destacam-se: 
+
+            Diagnóstico e tratamento: após avaliação detalhada do paciente, que inclui histórico pessoal e familiar, sintomas atuais e exame físico, o profissional é capaz de fazer o diagnóstico e desenvolver um plano de tratamento adequado. 
+            Monitoramento de condições crônicas: com o ajuste de medicamentos ou terapias, conforme a necessidade de cada paciente, como em pessoas com hipertensão arterial, por exemplo. 
+            Cuidados preventivos: solicitar exames de rotina está entre eles. Podem ser laboratoriais, mamografia, colonoscopia, exames de visão, entre outros. 
+            Orientações e cuidados: sobre prevenção de doenças, promoção da saúde e estilo de vida saudável. 
+            Encaminhamento para outros especialistas: a depender da condição do indivíduo, o clínico geral pode fazer o encaminhamento para um cardiologista, um neurologista, etc. 
+            Quais exames o médico clínico geral pode solicitar? 
+            O clínico geral pode solicitar desde exames mais simples como de sangue e urina até aqueles mais complexos como tomografias e ressonâncias magnéticas, uma vez que o profissional pode tratar diversas doenças, conforme explicamos abaixo.<br><br>
+
+            <p>
+                Quais doenças o clínico geral trata?
+            </p> 
+            Algumas doenças comuns tratadas pelo clínico geral incluem:<br>
+
+            <b>Hipertensão arterial:</b> ocorre quando há elevação persistente da pressão que o sangue faz ao circular pelas artérias do corpo.<br>
+            <b>Diabetes:</b> doença crônica que ocorre pela falta de insulina, hormônio responsável por levar a glicose que está no sangue para o interior das células, e/ou quando o organismo não responde adequadamente aos seus efeitos.<br>
+            <b>Alterações do colesterol:</b> substância lipídica presente no organismo, essencial para diversas funções. No entanto, quando em excesso, e dependendo do tipo de colesterol, pode levar ao acúmulo de placas nas artérias e aumentar o risco de doenças cardiovasculares.<br>
+            <b>Problemas na tireoide:</b> hipotireoidismo (quando a tireoide não produz hormônios em quantidade suficiente), hipertireoidismo (o oposto do anterior, ou seja, a tireoide produz hormônios em excesso), nódulos tireoidianos, entre outros.<br>
+            <b>Alergias:</b> um exemplo é a rinite alérgica (reação alérgica que afeta o nariz e as vias respiratórias superiores).<br>
+            <b>Infecções urinárias:</b> sejam as causadas no trato urinário inferior (cistite) ou as que afetam o trato urinário superior (pielonefrite), que é mais grave e pode comprometer o funcionamento dos rins.<br>
+            <b>Infecções pulmonares:</b> gripes, resfriados, pneumonia e bronquite.<br>  
+            Além disso, o profissional trata de outras doenças que não necessitam de intervenção cirúrgica.
+        </div>
+        
+        <div class="especialidades">
+
+            <p>Especialidades</p>
+
+            <div class="especialidades-container">
+
+                <button onclick="window.location.href='Inicial.html'">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Pagina Inicial</span>
+                </button>
+
+                <button onclick="window.location.href='Cardiologia.html'">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <span>Cardiologia</span>
+                </button>
+
+                <button onclick="window.location.href='Neurologia.html'">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Neurologia</span>
+                </button>
+
+                <button onclick="window.location.href='oftalmologia.html'">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>Oftalmologia</span>
+                </button>
+        </div>
+    </div>
+    <script>
+
+        const imagens = [
+
+            "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+            "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+            "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+        ];
+
+        let indice = 0;
+
+        function mudarSlide(direcao) {
+
+            indice += direcao;
+
+            if (indice >= imagens.length) {
+                indice = 0;
+            }
+
+            if (indice < 0) {
+                indice = imagens.length - 1;
+            }
+
+            document.getElementById("imagem-carrossel").src = imagens[indice];
+        }
+
+        // Carrossel automático
+
+        setInterval(() => {
+            mudarSlide(1);
+        }, 4000);
+    </script>
+    <footer>
+        <p>© 2026 Click Saúde - Todos os direitos reservados</p>
+    </footer>
+
+    </body>
+</html>

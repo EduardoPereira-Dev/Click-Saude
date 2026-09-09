@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Saúde - Agendamento</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: #30895f;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container{
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 400px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .input-box{
+            margin-bottom: 20px;
+        }
+
+        .input-box label{
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .input-box input,
+        .input-box select{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .input-box input:focus,
+        .input-box select:focus{
+            border-color: #4facfe;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #4facfe;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #1d8df1;
+        }
+
+        .logo{
+            margin-top: 20px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 20px;
+        }
+
+        .mensagem{
+            margin-top: 20px;
+            text-align: center;
+            color: green;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        CLICK SAÚDE
+    </div>
+
+    <div class="container">
+
+        <h1>Agendamento</h1>
+
+        <form id="formAgendamento">
+
+            <div class="input-box">
+                <label>Nome Completo</label>
+                <input type="text" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="input-box">
+                <label>Escolha a Especialidade</label>
+
+                <select required>
+                    <option value="">Selecione</option>
+                    <option>Clínico Geral</option>
+                    <option>Cardiologista</option>
+                    <option>Neurologia</option>
+                    <option>Oftalmologia</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>Escolha o Dia</label>
+                <input type="date" required>
+            </div>
+
+            <div class="input-box">
+                <label>Escolha o Horário</label>
+                <input type="time" required>
+            </div>
+
+            <button type="submit">
+                Agendar Consulta
+            </button>
+
+            <div class="mensagem" id="mensagem"></div>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        const form = document.getElementById("formAgendamento");
+        const mensagem = document.getElementById("mensagem");
+
+        form.addEventListener("submit", function(event){
+
+            event.preventDefault();
+
+            mensagem.innerHTML = "Consulta agendada com sucesso!";
+
+        });
+
+    </script>
+
+</body>
+</html>
